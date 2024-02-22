@@ -1,0 +1,26 @@
+#welcome {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Pacifico', cursive; /* This is a Google Font that is cursive */
+    font-size: 5.2em;
+    // color: #FC0; /* Hot pink */
+    color: #e0deb2;
+    background-color: rgba(255, 0, 0, 0.595);
+    text-shadow: 0 0 10px #FC0, 0 0 20px #FC0, 0 0 30px #FC0, 0 0 40px #FC0; /* Glowing effect */
+    -webkit-text-stroke: #ff69b4; /* Change color and width as needed */
+    animation: glowing 2s infinite;
+    z-index: 100;
+}
+
+@keyframes glowing {
+    0% { text-shadow: 0 0 5px #FC0, 0 0 10px #FC0, 0 0 15px #FC0, 0 0 20px #FC0; }
+    50% { text-shadow: 0 0 20px #FC0, 0 0 30px #FC0, 0 0 40px #FC0, 0 0 50px #FC0; }
+    100% { text-shadow: 0 0 5px #FC0, 0 0 10px #FC0, 0 0 15px #FC0, 0 0 20px #FC0; }
+}

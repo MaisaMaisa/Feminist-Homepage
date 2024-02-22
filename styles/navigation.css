@@ -1,0 +1,51 @@
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  /* Stick to the top of the container */
+  background-color: #ff69b4;
+  /* Hot pink */
+  color: white;
+  padding: 1px;
+  padding-left: 1%;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  /* Feminist vibe with a typewriter-style font */
+  z-index: 1;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 1em;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  /* Smooth transform transition */
+}
+
+nav ul li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  /* Slightly enlarge the list item on hover */
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  /* Smooth color transition */
+}
+
+nav ul li a:hover {
+  color: #000000;
+  /* Change color to black on hover */
+  text-decoration: underline;
+}
+/*# sourceMappingURL=navigation.css.map */

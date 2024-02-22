@@ -1,0 +1,36 @@
+.slideshow,
+.cyber-slideshow  {
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide,
+.cyber-slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slide:first-child,
+.cyber-slide:first-child {
+    display: block;
+}
+
+.slide img,
+.cyber-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text {
+    position: absolute;
+    bottom: 0;
+    // background: rgba(0, 0, 0, 0.5);
+    color: #FF69B4;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}

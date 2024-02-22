@@ -1,0 +1,54 @@
+#welcome {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  /* This is a Google Font that is cursive */
+  font-size: 5.2em;
+  color: #e0deb2;
+  background-color: rgba(255, 0, 0, 0.595);
+  text-shadow: 0 0 10px #FC0, 0 0 20px #FC0, 0 0 30px #FC0, 0 0 40px #FC0;
+  /* Glowing effect */
+  -webkit-text-stroke: #ff69b4;
+  /* Change color and width as needed */
+  -webkit-animation: glowing 2s infinite;
+          animation: glowing 2s infinite;
+  z-index: 100;
+}
+
+@-webkit-keyframes glowing {
+  0% {
+    text-shadow: 0 0 5px #FC0, 0 0 10px #FC0, 0 0 15px #FC0, 0 0 20px #FC0;
+  }
+  50% {
+    text-shadow: 0 0 20px #FC0, 0 0 30px #FC0, 0 0 40px #FC0, 0 0 50px #FC0;
+  }
+  100% {
+    text-shadow: 0 0 5px #FC0, 0 0 10px #FC0, 0 0 15px #FC0, 0 0 20px #FC0;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    text-shadow: 0 0 5px #FC0, 0 0 10px #FC0, 0 0 15px #FC0, 0 0 20px #FC0;
+  }
+  50% {
+    text-shadow: 0 0 20px #FC0, 0 0 30px #FC0, 0 0 40px #FC0, 0 0 50px #FC0;
+  }
+  100% {
+    text-shadow: 0 0 5px #FC0, 0 0 10px #FC0, 0 0 15px #FC0, 0 0 20px #FC0;
+  }
+}
+/*# sourceMappingURL=welcome.css.map */

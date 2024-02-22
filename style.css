@@ -1,0 +1,285 @@
+#welcome {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  /* This is a Google Font that is cursive */
+  font-size: 5.2em;
+  color: #e0deb2;
+  background-color: rgba(255, 0, 0, 0.595);
+  text-shadow: 0 0 10px #FC0, 0 0 20px #FC0, 0 0 30px #FC0, 0 0 40px #FC0;
+  /* Glowing effect */
+  -webkit-text-stroke: #ff69b4;
+  /* Change color and width as needed */
+  -webkit-animation: glowing 2s infinite;
+          animation: glowing 2s infinite;
+  z-index: 100;
+}
+
+@-webkit-keyframes glowing {
+  0% {
+    text-shadow: 0 0 5px #FC0, 0 0 10px #FC0, 0 0 15px #FC0, 0 0 20px #FC0;
+  }
+  50% {
+    text-shadow: 0 0 20px #FC0, 0 0 30px #FC0, 0 0 40px #FC0, 0 0 50px #FC0;
+  }
+  100% {
+    text-shadow: 0 0 5px #FC0, 0 0 10px #FC0, 0 0 15px #FC0, 0 0 20px #FC0;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    text-shadow: 0 0 5px #FC0, 0 0 10px #FC0, 0 0 15px #FC0, 0 0 20px #FC0;
+  }
+  50% {
+    text-shadow: 0 0 20px #FC0, 0 0 30px #FC0, 0 0 40px #FC0, 0 0 50px #FC0;
+  }
+  100% {
+    text-shadow: 0 0 5px #FC0, 0 0 10px #FC0, 0 0 15px #FC0, 0 0 20px #FC0;
+  }
+}
+
+/* For Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f2f2f2;
+  /* Light grey background */
+  border-radius: 0 10px 10px 0;
+  /* Rounded corners */
+  -webkit-box-shadow: inset -5px 0px 5px #8B4513;
+          box-shadow: inset -5px 0px 5px #8B4513;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff69b4;
+  /* Hot pink */
+  border-radius: 0 10px 10px 0;
+  border-left: none;
+}
+
+header, footer {
+  position: fixed;
+  width: 80%;
+  /* take up 80% of the width of its parent */
+  z-index: 2;
+}
+
+details {
+  background-color: #FF69B4;
+  /* hot pink background */
+  color: white;
+  /* white text */
+  padding: 20px;
+  /* 20 pixels of padding on all sides */
+  margin: 10px 0;
+  /* 10 pixels of vertical margin */
+  border-radius: 10px;
+  /* rounded corners */
+  width: 80%;
+  /* take up 80% of the width of its parent */
+  margin-left: auto;
+  /* center the details component */
+  margin-right: auto;
+  /* center the details component */
+  -webkit-box-shadow: inset 0px 0px 20px 5px #8B4513;
+          box-shadow: inset 0px 0px 20px 5px #8B4513;
+}
+
+details summary {
+  font-size: 1.5em;
+  /* make the summary text larger */
+  cursor: pointer;
+  /* change the cursor when hovering over the summary */
+}
+
+details p {
+  margin: 10px 0;
+  /* add some space between paragraphs */
+}
+
+body {
+  background: #8b4513c4;
+  /* Soil brown background */
+  scrollbar-face-color: #ff69b4;
+  /* Hot pink */
+  scrollbar-track-color: #f5f5f5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.feminisms-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 70vh;
+  /* Adjust as needed */
+  margin-top: 13vh;
+  background: transparent;
+  /* Soil brown background */
+  border-radius: 5px;
+  /* Rounded corners */
+}
+
+#navMenu, #cyberfeminism-nav {
+  border-radius: 0;
+  /* Rounded corners */
+  -webkit-box-shadow: inset 5px 5px 10px #8B4513;
+          box-shadow: inset 5px 5px 10px #8B4513;
+  z-index: 1;
+}
+
+#feminism, #cyberfeminism {
+  width: 48%;
+  /* Adjust as needed */
+  overflow-y: auto;
+  /* Enables scrolling on the sections */
+  padding-bottom: 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #f2f2f2;
+  /* Light grey background */
+  -webkit-box-shadow: inset 5px -5px 10px #8B4513;
+          box-shadow: inset 5px -5px 10px #8B4513;
+  border-radius: 10px;
+  /* Rounded corners */
+}
+
+.content {
+  padding: 1%;
+}
+
+footer {
+  background-color: #FF69B4;
+  /* hot pink background */
+  color: white;
+  /* white text */
+  padding: 20px;
+  /* 20 pixels of padding on all sides */
+  margin: 10px 0;
+  /* 10 pixels of vertical margin */
+  border-radius: 10px;
+  /* rounded corners */
+  text-align: center;
+  /* center the text */
+  bottom: 0;
+  -webkit-box-shadow: inset 0px 0px 20px 5px #8B4513;
+          box-shadow: inset 0px 0px 20px 5px #8B4513;
+}
+
+footer p {
+  margin: 10px 0;
+  /* add some space between paragraphs */
+}
+
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  /* Stick to the top of the container */
+  background-color: #ff69b4;
+  /* Hot pink */
+  color: white;
+  padding: 1px;
+  padding-left: 1%;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  /* Feminist vibe with a typewriter-style font */
+  z-index: 1;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 1em;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  /* Smooth transform transition */
+}
+
+nav ul li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  /* Slightly enlarge the list item on hover */
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  /* Smooth color transition */
+}
+
+nav ul li a:hover {
+  color: #000000;
+  /* Change color to black on hover */
+  text-decoration: underline;
+}
+
+.slideshow,
+.cyber-slideshow {
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide,
+.cyber-slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide:first-child,
+.cyber-slide:first-child {
+  display: block;
+}
+
+.slide img,
+.cyber-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.text {
+  position: absolute;
+  bottom: 0;
+  color: #FF69B4;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

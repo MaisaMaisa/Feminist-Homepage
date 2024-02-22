@@ -1,0 +1,97 @@
+/* For Chrome, Safari and Opera */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f2f2f2; /* Light grey background */
+    border-radius: 0 10px 10px 0; /* Rounded corners */
+    // border-right: solid #ff69b4 1px;
+    box-shadow: inset -5px 0px 5px #8B4513;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff69b4; /* Hot pink */
+    border-radius: 0 10px 10px 0;
+    border-left: none;
+}
+
+header, footer{
+    position: fixed;
+    width: 80%; /* take up 80% of the width of its parent */
+    z-index: 2;
+}
+
+details {
+    background-color: #FF69B4; /* hot pink background */
+    color: white; /* white text */
+    padding: 20px; /* 20 pixels of padding on all sides */
+    margin: 10px 0; /* 10 pixels of vertical margin */
+    border-radius: 10px; /* rounded corners */
+    width: 80%; /* take up 80% of the width of its parent */
+    margin-left: auto; /* center the details component */
+    margin-right: auto; /* center the details component */
+    box-shadow: inset 0px 0px 20px 5px #8B4513;
+}
+
+details summary {
+    font-size: 1.5em; /* make the summary text larger */
+    cursor: pointer; /* change the cursor when hovering over the summary */
+}
+
+details p {
+    margin: 10px 0; /* add some space between paragraphs */
+}
+
+body{
+    background: #8b4513c4; /* Soil brown background */
+    scrollbar-face-color: #ff69b4; /* Hot pink */
+    scrollbar-track-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.feminisms-container{
+    display: flex;
+    justify-content: space-between;
+    height: 70vh; /* Adjust as needed */
+    margin-top: 13vh;
+    background: transparent; /* Soil brown background */
+    border-radius: 5px; /* Rounded corners */
+}
+
+#navMenu, #cyberfeminism-nav{
+    border-radius: 0; /* Rounded corners */
+    box-shadow: inset 5px 5px 10px #8B4513;
+    z-index: 1;
+}
+
+#feminism, #cyberfeminism {
+    width: 48%; /* Adjust as needed */
+    overflow-y: auto; /* Enables scrolling on the sections */
+    padding-bottom: 100px;
+    box-sizing: border-box;
+    background: #f2f2f2; /* Light grey background */
+    box-shadow: inset 5px -5px 10px #8B4513;
+    border-radius: 10px; /* Rounded corners */
+}
+
+.content{
+    padding: 1%;
+}
+
+footer {
+    background-color: #FF69B4; /* hot pink background */
+    color: white; /* white text */
+    padding: 20px; /* 20 pixels of padding on all sides */
+    margin: 10px 0; /* 10 pixels of vertical margin */
+    border-radius: 10px; /* rounded corners */
+    text-align: center; /* center the text */
+    bottom: 0;
+    box-shadow: inset 0px 0px 20px 5px #8B4513;
+}
+
+footer p {
+    margin: 10px 0; /* add some space between paragraphs */
+}
