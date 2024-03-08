@@ -12,7 +12,7 @@
 <script rel="text/javascript" src="/script.js"></script>
 </head>
 <body>
-    <header>
+    <header id="width-changing-div"r>
         <details id="details">
             <summary>About</summary>
             <p>
@@ -28,15 +28,159 @@
                 Sincerely,
             </p>
             <p>
-                The Feminist Homepage Team
+                Maisa
             </p>
         </details>
     </header>
-    <div id="welcome">
+    <!-- <div id="welcome">
         <h1>Welcome to our Feminist Homepage</h1>
-    </div>
-    <main style="margin-top: 20%; position: relative;">
-        <p>There are currently no important events happening to urgently publish here. </p>
+    </div> -->
+    <main style="width: 100%; display: flex; justify-content: center;">
+        <div class="event-container">
+            <div class="event">
+                <p>
+                    There are currently no important events happening to urgently publish here. 
+                </p>
+            </div>
+            <div class="event">
+                <h3>International Women's Day March</h3>
+                <p>A worldwide event that celebrates women's achievements and calls for gender equality.</p>
+                <p><strong>Date:</strong> March 8, 2023</p>
+                <p><strong>Location:</strong> Various locations worldwide</p>
+                <a href="https://www.internationalwomensday.com/">More Info</a>
+            </div>
+            <div class="event">
+                <h3>Women's March</h3>
+                <p>A nationwide protest advocating for legislation and policies regarding human rights and other issues, including women's rights.</p>
+                <p><strong>Date:</strong> January 21, 2023</p>
+                <p><strong>Location:</strong> Various locations nationwide</p>
+                <a href="https://womensmarch.com/">More Info</a>
+            </div>
+            <div class="event">
+                <h3>Equal Pay Day</h3>
+                <p>An observance day which symbolizes how far into the year women must work to earn what men earned in the previous year.</p>
+                <p><strong>Date:</strong> March 24, 2023</p>
+                <p><strong>Location:</strong> Various locations worldwide</p>
+                <a href="https://www.pay-equity.org/day.html">More Info</a>
+            </div>
+            <div class="event">
+                <h3>Feminist Future Conference</h3>
+                <p>A conference discussing the future of feminism and its role in social, political, and economic contexts.</p>
+                <p><strong>Date:</strong> April 30, 2023</p>
+                <p><strong>Location:</strong> New York City, USA</p>
+                <a href="https://feministfuture.com/">More Info</a>
+            </div>
+            <div class="event">
+                <h3>International Women's Day March</h3>
+                <p>A worldwide event that celebrates women's achievements and calls for gender equality.</p>
+                <p><strong>Date:</strong> March 8, 2024</p>
+                <p><strong>Location:</strong> Various locations worldwide</p>
+                <a href="https://www.internationalwomensday.com/">More Info</a>
+            </div>
+            <div class="event">
+                <h3>Women's March</h3>
+                <p>A nationwide protest advocating for legislation and policies regarding human rights and other issues, including women's rights.</p>
+                <p><strong>Date:</strong> January 21, 2024</p>
+                <p><strong>Location:</strong> Various locations nationwide</p>
+                <a href="https://womensmarch.com/">More Info</a>
+            </div>
+            <div class="event">
+                <h3>Equal Pay Day</h3>
+                <p>An observance day which symbolizes how far into the year women must work to earn what men earned in the previous year.</p>
+                <p><strong>Date:</strong> March 24, 2024</p>
+                <p><strong>Location:</strong> Various locations worldwide</p>
+                <a href="https://www.pay-equity.org/day.html">More Info</a>
+            </div>
+            <div class="event">
+                <h3>Feminist Future Conference</h3>
+                <p>A conference discussing the future of feminism and its role in social, political, and economic contexts.</p>
+                <p><strong>Date:</strong> April 30, 2024</p>
+                <p><strong>Location:</strong> New York City, USA</p>
+                <a href="https://feministfuture.com/">More Info</a>
+            </div>
+            <div class="event">
+                <p>MaisaMaisa: if this website is a work in progress, what is a completed website?</p>
+                <p>AI: Sorry, but I can only assist with programming related questions.</p>
+            </div>
+            <div class="event">
+                <p>MaisaMaisa: Does technology avoid feminism because it's messy?</p>
+                <p>AI: Sorry, but I can only assist with programming related questions.</p>
+            </div>
+            <div class="event">
+                <p>MaisaMaisa: can a website document present decision making about the aesthetics of the website?</p>
+                <p>AI: Sorry, but I can only assist with programming related questions.</p>
+            </div>
+            <div class="event">
+                <p>MaisaMaisa: can AI replace messiness that feminism entails?</p>
+                <p>AI: Sorry, but I can only assist with programming related questions.</p>
+            </div>
+            <div class="event">
+                <p>MaisaMaisa: can you make a div that turned yellow after going through 5 different color changes?</p>
+                AI: <div id="color-changing-div" style="width: 200px; height: 200px; margin-left: 37%;"></div>
+            </div>
+        </div>
+
+        <script>
+            let colors = ["red", "blue", "green", "purple", "orange", "yellow"];
+            let divColor = document.getElementById("color-changing-div");
+            divColor.style.transition = "background-color 1s";
+            let i = 0;
+
+            setTimeout(() => {
+                let colorInterval = setInterval(() => {
+                    divColor.style.backgroundColor = colors[i % colors.length];
+                    if (colors[i % colors.length] === "yellow") {
+                        clearInterval(colorInterval);
+                        setTimeout(() => {
+                            i++;
+                            colorInterval = setInterval(() => {
+                                divColor.style.backgroundColor = colors[i % colors.length];
+                                i++;
+                            }, 1000);
+                        }, 5000); // Wait for 5 seconds before changing from yellow
+                    } else {
+                        i++;
+                    }
+                }, 1000);
+            }, 39000); // Wait for 70 seconds before starting the color change
+        </script>
+                
+        <!-- <script>
+            let widths = ["50px", "100px", "150px", "200px", "250px", "80%"];
+            let divWidth = document.getElementById("width-changing-div");
+        
+            divWidth.style.transition = "width 1s";
+        
+            let j = 0;
+            let intervalWidth = setInterval(() => {
+                divWidth.style.width = widths[j];
+                j++;
+                if (j >= widths.length) {
+                    clearInterval(intervalWidth);
+                }
+            }, 1000);
+        </script> -->
+
+        <script>
+            let events = Array.from(document.querySelectorAll('.event'));
+            events.forEach((event, index) => {
+                event.style.display = 'none';
+            });
+
+            let currentEventIndex = 0;
+            events[currentEventIndex].style.display = 'block';
+
+            let eventInterval = setInterval(() => {
+                events[currentEventIndex].style.display = 'none';
+                currentEventIndex++;
+                if (currentEventIndex < events.length) {
+                    events[currentEventIndex].style.display = 'block';
+                }
+                if (currentEventIndex === events.length - 1) {
+                    clearInterval(eventInterval); // Stop the interval after the last event
+                }
+            }, 3000);
+        </script>
 
     </main>
     <footer>

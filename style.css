@@ -195,6 +195,14 @@ footer p {
   /* add some space between paragraphs */
 }
 
+.event-container {
+  margin-top: 10%;
+}
+
+.event {
+  text-align: center;
+}
+
 nav {
   position: -webkit-sticky;
   position: sticky;
