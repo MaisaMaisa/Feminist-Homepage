@@ -191,4 +191,74 @@
         </p>
     </footer>
 </body>
+
+<script>
+let soundCount = 0;
+let cooldown = false;
+
+// Check if the browser supports the MediaDevices API
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    console.log('MediaDevices API and getUserMedia supported.');
+
+    // Request access to the microphone
+    navigator.mediaDevices.getUserMedia({ audio: true })
+        .then(function(stream) {
+            console.log('Microphone access granted.');
+
+            // Create a new audio context
+            let audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            let source = audioContext.createMediaStreamSource(stream);
+            let analyser = audioContext.createAnalyser();
+            analyser.fftSize = 1024;
+            source.connect(analyser);
+
+            let bufferLength = analyser.frequencyBinCount;
+            let dataArray = new Uint8Array(bufferLength);
+
+            // Function to check the volume
+            function checkVolume() {
+                analyser.getByteFrequencyData(dataArray);
+
+                // Calculate the volume
+                let volume = dataArray.reduce((a, b) => a + b) / bufferLength;
+
+                // If the volume is above a certain threshold, play an alarm
+                if (volume > 40 && !cooldown) { // Adjust this threshold as needed
+                    soundCount++;
+                    cooldown = true;
+
+
+                    if (soundCount === 1) {
+                        $('<p class="i-hear-you">I hear you</p>').insertBefore('.event-container');
+                        $('.event-container').fadeOut();
+                    } else if (soundCount === 2) {
+                        $('footer').fadeOut();
+                    } else if (soundCount === 3) {
+                        $('header').fadeOut();
+                    } else if (soundCount === 4) {
+                        $('<p class="i-hear-you">I hear you tooo</p>').insertBefore('.event-container');
+                    }
+
+                    // Start the cooldown period (2 seconds in this example)
+                    setTimeout(function() {
+                        cooldown = false;
+                    }, 300);
+                }
+
+                // Check the volume again in 100 milliseconds
+                if (soundCount < 4) {
+                    setTimeout(checkVolume, 100);
+                }
+            }
+
+            // Start checking the volume
+            checkVolume();
+        })
+        .catch(function(err) {
+            console.log('Error: ' + err);
+        });
+        } else {
+            console.log('MediaDevices API and/or getUserMedia not supported on your browser.');
+        }
+</script>
 </html>
